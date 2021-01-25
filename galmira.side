@@ -1,0 +1,135 @@
+{
+  "id": "327c2a8d-8573-4d84-8e78-adc2c9e5b83f",
+  "version": "2.0",
+  "name": "galmira",
+  "url": "https://www.glamira.co.uk",
+  "tests": [{
+    "id": "eb37b021-3183-40cc-a059-e42e24826679",
+    "name": "login fail",
+    "commands": [{
+      "id": "5ae4c7b1-8fab-4727-865f-3995bdfac5ea",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8c21ca7-ca41-4b7d-b16c-1ea5820db71a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "924x789",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc07b5bd-63cc-4cb4-b91e-acccb4c7c9c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.links a",
+      "targets": [
+        ["css=.links a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log In/Sign Up')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.glamira.co.uk/customer/account/login/')])[3]", "xpath:href"],
+        ["xpath=//div[3]/div[4]/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "100c2f60-6317-408d-9626-439caa5adc8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-list:nth-child(2) > li:nth-child(2)",
+      "targets": [
+        ["css=.form-list:nth-child(2) > li:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='login-form']/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//form/div/ul/li[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3d5a889-e90c-4c4c-8c14-e4aabb0c12a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=login[username]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/ul/li[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6506edd-1c13-42e8-b6b0-9b766e828189",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=login[username]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/ul/li[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0391df19-953b-423b-9ce3-662807489429",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=login[username]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/ul/li[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "25251225iu@gmail.com"
+    }, {
+      "id": "2d97aafd-9477-4c36-8588-631d08ad809b",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=login[password]", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/ul/li[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//li[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "!test123!"
+    }, {
+      "id": "433af343-572e-4ddd-8ef1-f171b05f9928",
+      "comment": "",
+      "command": "click",
+      "target": "css=#send2 > span > span",
+      "targets": [
+        ["css=#send2 > span > span", "css:finder"],
+        ["xpath=//button[@id='send2']/span/span", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07f2fb0e-18f0-4e71-ac16-c83ba533c34f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.messages:nth-child(1) > .error-msg li",
+      "targets": [
+        ["css=.messages:nth-child(1) > .error-msg li", "css:finder"],
+        ["xpath=//div[8]/div/div/div/div/div/ul/li/ul/li", "xpath:position"]
+      ],
+      "value": "Invalid login or password."
+    }]
+  }],
+  "suites": [{
+    "id": "b4e6d95f-aff6-47db-addc-18fc160491a9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["eb37b021-3183-40cc-a059-e42e24826679"]
+  }],
+  "urls": ["https://www.glamira.co.uk/"],
+  "plugins": []
+}
